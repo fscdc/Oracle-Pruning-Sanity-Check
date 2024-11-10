@@ -20,10 +20,10 @@
 This repository is for our paper:
 
 > **[Is Oracle Pruning the True Oracle?](https://github.com/fscdc/Oracle-Pruning-Sanity-Check)** \
-> [Sicheng Feng](https://fscdc.github.io/)<sup>1,2</sup>, [Keda Tao]()<sup>1,3</sup>, [Huan Wang](http://huanwang.tech/)<sup>1,*</sup>
-> <sup>1</sup>School of Engineering, Westlake University, Hangzhou, China
-> <sup>2</sup>College of Computer Science, Nankai University, Tianjin, China
-> <sup>3</sup>School of Communication Engineering, Xidian University
+> [Sicheng Feng](https://fscdc.github.io/)<sup>1,2</sup>, [Keda Tao]()<sup>1,3</sup>, [Huan Wang](http://huanwang.tech/)<sup>1,*</sup> \
+> <sup>1</sup>School of Engineering, Westlake University, Hangzhou, China \
+> <sup>2</sup>College of Computer Science, Nankai University, Tianjin, China \
+> <sup>3</sup>School of Communication Engineering, Xidian University \
 > <sup>∗</sup>Corresponding author: wanghuan@westlake.edu.cn
 <!-- > <sup>†</sup>Work done when Huan was an intern at MERL \ -->
 
