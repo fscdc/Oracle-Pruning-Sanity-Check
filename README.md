@@ -1,6 +1,4 @@
 <div align="center">
-  <!-- <h1><b> Time-LLM </b></h1> -->
-  <!-- <h2><b> Time-LLM </b></h2> -->
   <h2><b> Is Oracle Pruning the True Oracle? </b></h2>
 </div>
 
@@ -29,7 +27,6 @@
 TODO
 ```
 
-
 ## Updates/News:
 
 🚩 **News** (Nov. 2024): First release!
@@ -52,73 +49,76 @@ TODO
 
 ## Requirements and Installation
 
-We use Python 3.10 from Anaconda. Two conda environments are provided for the experiments: `./Pruning/environment.yml` and `./Pruning-Transformer/environment.yml`. The second one is for ViT experiments, while the first one is for other experiments.
+We use Python 3.10 from Anaconda. Two conda environments are provided for the experiments: `./pruning/environment.yml` and `./pruning-transformer/environment.yml`. The second one is for ViT experiments, while the first one is for other experiments.
 
 To install all dependencies:
 ```
-conda env create -f ./Pruning/environment.yaml
+conda env create -f ./pruning/environment.yaml
 
 # or
-conda env create -f ./Pruning-Transformer/environment.yaml
+conda env create -f ./pruning-transformer/environment.yaml
 ```
 
 ## Datasets
 All datasets used in the experiments, except for ImageNet, can be automatically downloaded via the code. This includes MNIST and its variants, CIFAR10, and CIFAR100. For ImageNet, please download it from this link (https://www.image-net.org/).
 
 
-
 ## How to Reproduce Experiments 
+
 
 The pipeline to reproduce the experiments in the paper is as follows:
 
+
 1. Get ready for the two conda environments and ImageNet dataset.
 
-2. Place the pretrained models (from release: **Reproduce-Necessities**) in the `./Pruning/Experiments/` directory. 
 
-3. Place the combination files (from release: **Reproduce-Necessities**) in the `./Pruning/Combinations/` directory (maybe need to change name according to the experiment. If you have problems, feel free to *pull request*). 
-
-4. Run the following command to reproduce the experiments in the paper. The command is in the format of `./xx.sh`. There is two code bases: `Pruning` and `Pruning-Transformer`. The former is for the experiments on LeNet5, VGG19, and ResNets, while the latter is for the experiments on ViT.
+2. Place the pretrained models (from release: **Reproduce-Necessities**) in the `./pruning/Experiments/` directory. 
 
 
-(1) **ViT** experiments: If you want to modify used gpus, please modify the `gpu_ids` and `num_processes` in the `./Pruning-Transformer/default_config.yaml` file. (Default: `gpu_ids: 0,1,2,3` and `num_processes: 4`)
+3. Place the combination files (from release: **Reproduce-Necessities**) in the `./pruning/Combinations/` directory (maybe need to change name according to the experiment. If you have problems, feel free to *pull request*). 
+
+
+4. Run the following command to reproduce the experiments in the paper. The command is in the format of `./xx.sh`. There is two code bases: `pruning` and `pruning-transformer`. The former is for the experiments on LeNet5, VGG19, and ResNets, while the latter is for the experiments on ViT.
+
+
+(1) **ViT** experiments: If you want to modify used gpus, please modify the `gpu_ids` and `num_processes` in the `./pruning-transformer/default_config.yaml` file. (Default: `gpu_ids: 0,1,2,3` and `num_processes: 4`)
+
 
 ```bash
-cd Pruning-Transformer
+cd pruning-transformer
 ./scripts/vit_imagenet_torch.sh
 ```
 
 (2) **LeNet5** experiments: 
 
 ```bash
-cd Pruning
+cd pruning
 ./scripts/pruning-lenet5-xxx.sh
 ```
 
 (3) **VGG19** experiments: 
 
 ```bash
-cd Pruning
+cd pruning
 ./DEV_sicheng/scripts_pruning/pruning-vgg19-lr2.sh
 ```
 
 (4) **ResNet56** experiments: 
 
 ```bash
-cd Pruning
+cd pruning
 ./DEV_sicheng/scripts_pruning/pruning-resnet56-lr2.sh
 ```
 
 (5) **ResNet18** experiments: 
 
 ```bash
-cd Pruning
+cd pruning
 ./DEV_sicheng/scripts_pruning/pruning-resnet18-lr2.sh
 ```
 
-
-
-
 ## Further Reading
+
 1, [**What is the State of Neural Network Pruning?**](https://arxiv.org/abs/2003.03033), in *MLSys* 2020.
 [\[GitHub Repo\]](https://github.com/jjgo/shrinkbench)
 

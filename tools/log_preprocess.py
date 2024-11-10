@@ -95,7 +95,7 @@ def main():
     parser.add_argument("--filename", type=str, required=True, help="Prefix of the files to merge")
     args = parser.parse_args()
 
-    directory = "./Pruning/record"
+    directory = "./pruning/record"
     output_filename = f"{args.filename}_summary.txt"
     l1_output_filename = f"{args.filename}-l1-summary.txt"
     
@@ -103,14 +103,14 @@ def main():
     
     merged_content = merge_files(input_files)
     
-    if not os.path.exists("./Pruning/record/summary"):
-        os.makedirs("./Pruning/record/summary")
+    if not os.path.exists("./pruning/record/summary"):
+        os.makedirs("./pruning/record/summary")
 
-    output_file_path = os.path.join("./Pruning/record/summary", output_filename)
+    output_file_path = os.path.join("./pruning/record/summary", output_filename)
     
     extract_and_split_lines(merged_content, output_file_path)
     
-    l1_output_file_path = os.path.join("./Pruning/record/summary", l1_output_filename)
+    l1_output_file_path = os.path.join("./pruning/record/summary", l1_output_filename)
     extract_fengsicheng_lines(args.filename, directory, l1_output_file_path)
     
 if __name__ == "__main__":

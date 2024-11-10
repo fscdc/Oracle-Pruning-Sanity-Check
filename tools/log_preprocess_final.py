@@ -156,7 +156,7 @@ def draw_plot(final_test_acc1, final_test_acc2, prefix, tau, p_value):
     ax.set_xlabel("Test accuracy (10% epochs)", fontsize=26)
     ax.tick_params(axis='both', which='major', labelsize=18)
 
-    plt.savefig(f'./Pruning/record/figures/{prefix}_acc.pdf')
+    plt.savefig(f'./pruning/record/figures/{prefix}_acc.pdf')
     plt.close()
 
 
@@ -165,10 +165,10 @@ def main():
     parser.add_argument("--filename", type=str, required=True, help="Prefix of the files to merge")
     args = parser.parse_args()
 
-    directory = "./Pruning/record"
+    directory = "./pruning/record"
 
-    if not os.path.exists("./Pruning/record/figures"):
-        os.makedirs("./Pruning/record/figures")
+    if not os.path.exists("./pruning/record/figures"):
+        os.makedirs("./pruning/record/figures")
 
     input_files1 = find_files(args.filename, directory)
     merged_content1 = merge_files(input_files1)

@@ -234,17 +234,16 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     import os
-    if not os.path.exists("./Pruning/record/figures"):
-        os.makedirs("./Pruning/record/figures")
+    if not os.path.exists("./pruning/record/figures"):
+        os.makedirs("./pruning/record/figures")
 
-    input_file_path = f'./Pruning/record/summary/{args.filename}_summary.txt'
-    input_l1_file_path = f'./Pruning/record/summary/{args.filename}-l1-summary.txt'
-    output_image_path2 = f'./Pruning/record/figures/{args.filename}_scatterplot2.pdf'
-    output_image_path3 = f'./Pruning/record/figures/{args.filename}_scatterplot3.pdf'
+    input_file_path = f'./pruning/record/summary/{args.filename}_summary.txt'
+    input_l1_file_path = f'./pruning/record/summary/{args.filename}-l1-summary.txt'
+    output_image_path2 = f'./pruning/record/figures/{args.filename}_scatterplot2.pdf'
+    output_image_path3 = f'./pruning/record/figures/{args.filename}_scatterplot3.pdf'
 
     df = extract_data(input_file_path)
     pruned_train_loss, final_train_loss, final_test_loss, final_test_acc = extract_l1_data(input_l1_file_path)
-
 
 
     print(f"\nAnalysis for {args.filename}")
