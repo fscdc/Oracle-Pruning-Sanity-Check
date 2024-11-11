@@ -17,6 +17,12 @@
 
 </div>
 
+<div align="center">
+
+![logo](./figures/logo.jpg)
+
+</div>
+
 This repository is for our paper:
 
 > **[Is Oracle Pruning the True Oracle?](https://github.com/fscdc/Oracle-Pruning-Sanity-Check)** \
@@ -25,8 +31,6 @@ This repository is for our paper:
 > <sup>2</sup>College of Computer Science, Nankai University, Tianjin, China \
 > <sup>3</sup>School of Communication Engineering, Xidian University \
 > <sup>∗</sup>Corresponding author: wanghuan@westlake.edu.cn
-<!-- > <sup>†</sup>Work done when Huan was an intern at MERL \ -->
-
 
 
 ---
