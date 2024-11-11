@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Oracle-Pruning-Sanity-Check">
+  <meta name="keywords" content="Neural Network Pruning, Oracle Pruning, Structured Pruning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is Oracle Pruning the True Oracle?</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/fscdc/Oracle-Pruning-Sanity-Check">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Is Oracle Pruning the True Oracle?</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://fscdc.github.io/">Sicheng Feng</a><sup>1,2</sup>&#8192;
+              </span>
+              <span class="author-block">
+                <a href="https://kd-tao.github.io/">Keda Tao</a><sup>1,3</sup>&#8192;
+              </span>
+              <span class="author-block">
+                <a href="http://huanwang.tech">Huan Wang</a><sup>1,*</sup>&#8192;
+              </span>
+            </div>
+            <h1 style="font-size:23px;font-weight:bold">2024</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span><sup>1</sup>School of Engineering, Westlake University, Hangzhou, China</span>
+              <span><sup>2</sup>College of Computer Science, Nankai University, Tianjin, China</span>
+              <span><sup>3</sup>School of Communication Engineering, Xidian University</span>
+            </div>
+
+            <div style="font-size:15px">
+              <span><sup>&ast;</sup>Corresponding author: wanghuan@westlake.edu.cn</span></br>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="todo"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>PDF</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="todo" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>ArXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/fscdc/Oracle-Pruning-Sanity-Check"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align='center'>
+          <a><img src="Figure/framework.svg"  height="220" ></a>
+        </div>
+        <div class="content has-text-justified">
+            Analysis framework of this work. We study the validity of oracle pruning in this paper, 
+            by examining the correlation between the <i>pruned train loss</i> and the <i>final test performance</i> (test accuracy or test loss). 
+            We apply this analysis framework to a wide range of networks and datasets (from toy networks like LeNet5-Mini to very large ones like ViT-B/16 and TinyLLaVA-3.1B) 
+            in order to have a comprehensive evaluation. The key finding of this work is that on modern networks and datasets (starting from the CIFAR level), 
+            oracle pruning is invalid, to our surprise. This new finding acutely challenges the conventional belief in network pruning over the past 35 years.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <i>Oracle pruning</i>, which selects unimportant weights by minimizing the pruned train loss, has been taken as the foundation for most neural network pruning methods for over 35 years, while few (if not none) have thought about how much the foundation really holds. This paper, for the first time, attempts to examine its validity on modern deep models through empirical correlation analyses and provide reflections on the field of neural network pruning. Specifically, for a typical pruning algorithm with three stages (pertaining, pruning, and retraining), we analyze the model performance correlation before and after retraining. Extensive experiments (<b>37K</b> models are trained) across a wide spectrum of models (LeNet5, VGG, ResNets, ViT, MLLM) and datasets (MNIST and its variants, CIFAR10/CIFAR100, ImageNet-1K, MLLM data) are conducted. The results lead to a surprising conclusion: on modern deep learning models, the performance before retraining is barely correlated with the performance after retraining. Namely, the weights selected by oracle pruning can hardly guarantee a good performance after retraining. This further implies that existing works using oracle pruning to derive pruning criteria may be groundless from the beginning. Further studies suggest the rising task complexity is one factor that makes oracle pruning invalid nowadays. Finally, given the evidence, we argue that the retraining stage in a pruning algorithm should be accounted for when developing any pruning criterion.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <h2 class="title is-3" align='center'>Correlation Results on MNIST</h2>
+            
+
+          <p align="center">
+            <a><img src="figure/lenet5/conv102_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv104_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv106_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv108_lr2_scatterplot3.svg" width="150" ></a>
+            </br>
+            <a><img src="figure/lenet5/conv202_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv204_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv206_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv208_lr2_scatterplot3.svg" width="150" ></a>
+            </br>
+            <a><img src="figure/lenet5/conv302_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv304_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv306_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv308_lr2_scatterplot3.svg" width="150" ></a>
+            </br>            
+            <a><img src="figure/lenet5/conv10.520.5_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv10.530.5_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv20.530.5_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/lenet5/conv1230.5_lr2_scatterplot3.svg" width="150" ></a>
+            </br>             
+          </p>
+
+          <h2 class="title is-3" align='center'>Correlation Results with VGG19/ResNet56/ResNet18</h2>
+
+          <p align="center">
+            <a><img src="figure/vgg19/vgg19_conv0.5_lr2_scatterplot3.svg" width="200" ></a>
+            <a><img src="figure/resnet56/resnet56_conv10.5_lr2_scatterplot3.svg" width="200" ></a>
+            <a><img src="figure/resnet18/resnet18_conv10.5_lr2_scatterplot3.svg" width="200" ></a>
+          </p>
+
+          <h2 class="title is-3" align='center'>Correlation Results with MNIST variants</h2>
+      
+          <p align="center">
+            <a><img src="figure/lenet5/conv105_lr2_scatterplot3.svg" width="200" ></a>
+            <a><img src="figure/km-mnist/fmnist_conv105_lr2_scatterplot3.svg" width="200" ></a>
+            <a><img src="figure/km-mnist/kmnist_conv105_lr2_scatterplot3.svg" width="200" ></a>
+          </p>
+
+          <h2 class="title is-3" align='center'>Correlation Results with LeNet5-Mini variants</h2>
+      
+          <p align="center">
+            <a><img src="figure/lenet5/conv105_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/diff/d6_conv105_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/diff/d7_conv105_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/diff/d8_conv105_lr2_scatterplot3.svg" width="150" ></a>
+            </br>
+            <a><img src="figure/lenet5/conv105_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/diff/w20_conv105_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/diff/w30_conv105_lr2_scatterplot3.svg" width="150" ></a>
+            <a><img src="figure/diff/w40_conv105_lr2_scatterplot3.svg" width="150" ></a>
+          </p>    
+
+          <h2 class="title is-3" align='center'>Correlation Results about Lesson</h2>
+
+          <p align="center">
+            <a><img src="figure/direction/conv105_lr2_acc.svg" width="200" ></a>
+            <a><img src="figure/direction/conv205_lr2_acc.svg" width="200" ></a>
+            <a><img src="figure/direction/conv305_lr2_acc.svg" width="200" ></a>
+            </br>
+            <a><img src="figure/direction/conv10.520.5_lr2_acc.svg" width="200" ></a>
+            <a><img src="figure/direction/conv10.530.5_lr2_acc.svg" width="200" ></a>
+            <a><img src="figure/direction/conv20.530.5_lr2_acc.svg" width="200" ></a>
+            </br>
+            <a><img src="figure/direction/conv1230.5_lr2_acc.svg" width="200" ></a>
+            <a><img src="figure/direction/resnet56_conv10.5_lr2_acc.svg" width="200" ></a>
+            <a><img src="figure/direction/resnet18_conv10.5_lr2_acc.svg" width="200" ></a>
+          </p>    
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>todo</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
