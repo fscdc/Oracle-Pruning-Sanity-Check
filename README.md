@@ -17,9 +17,17 @@
 
 </div>
 
+<!-- <div align="center">
+
+<img src="./figures/logo.jpg" height = "100" alt="" align=center />
+
+</div> -->
+
 <div align="center">
 
-![logo](./figures/logo.jpg)
+<img src="./figures/wlu-logo.png" height="100" alt="" align="center" style="margin-right: 10px;" />
+<img src="./figures/nku-logo.png" height="100" alt="" align="center" style="margin-right: 10px;" />
+<img src="./figures/xdu-logo.png" height="100" alt="" align="center" />
 
 </div>
 
