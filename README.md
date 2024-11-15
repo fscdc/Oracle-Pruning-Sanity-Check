@@ -1,6 +1,12 @@
+
+
 <div align="center">
+
   <h2><b> Is Oracle Pruning the True Oracle? </b></h2>
+  <h4>A Sanity-Check of the Pruning Paradigm over the Past 35 Years</h4>
+
 </div>
+
 
 <div align="center">
 
@@ -35,11 +41,13 @@ This repository is for our paper:
 
 > **[Is Oracle Pruning the True Oracle?](https://github.com/fscdc/Oracle-Pruning-Sanity-Check)** \
 > [Sicheng Feng](https://fscdc.github.io/)<sup>1,2</sup>, [Keda Tao](https://kd-tao.github.io/)<sup>1,3</sup>, [Huan Wang](http://huanwang.tech/)<sup>1,*</sup> \
-> <sup>1</sup>School of Engineering, Westlake University, Hangzhou, China \
-> <sup>2</sup>College of Computer Science, Nankai University, Tianjin, China \
-> <sup>3</sup>School of Communication Engineering, Xidian University \
+> <sup>1</sup>Westlake University, Hangzhou, China \
+> <sup>2</sup>Nankai University, Tianjin, China \
+> <sup>3</sup>Xidian University, Xi'an, China \
 > <sup>∗</sup>Corresponding author: wanghuan@westlake.edu.cn
 
+
+**TL'DR**: We empirically find the model performance *before* retraining is barely correlated with the performance *after* retraining in neural network pruning, which casts doubt on the foundation of the conventional pruning paradigm over the past 35 years.
 
 ---
 >
