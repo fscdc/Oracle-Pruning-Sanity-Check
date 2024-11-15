@@ -132,21 +132,21 @@ cd pruning
 
 ```bash
 cd pruning
-./DEV_sicheng/scripts_pruning/pruning-vgg19-lr2.sh
+./scripts/scripts_pruning/pruning-vgg19-lr2.sh
 ```
 
 (4) **ResNet56** experiments: 
 
 ```bash
 cd pruning
-./DEV_sicheng/scripts_pruning/pruning-resnet56-lr2.sh
+./scripts/scripts_pruning/pruning-resnet56-lr2.sh
 ```
 
 (5) **ResNet18** experiments: 
 
 ```bash
 cd pruning
-./DEV_sicheng/scripts_pruning/pruning-resnet18-lr2.sh
+./scripts/scripts_pruning/pruning-resnet18-lr2.sh
 ```
 
 ## Further Reading

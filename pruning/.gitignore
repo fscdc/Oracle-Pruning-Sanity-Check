@@ -17,6 +17,5 @@ pruned_models
 base_models
 model/*.th
 train_params/
-scripts
 wandb
 Combinations
