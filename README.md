@@ -67,14 +67,14 @@ TODO
 *Oracle pruning*, which selects unimportant weights by minimizing the pruned train loss, has been taken as the foundation for most neural network pruning methods for over 35 years, while few (if not none) have thought about how much the foundation really holds. This paper, for the first time, attempts to examine its validity on modern deep models through empirical correlation analyses and provide reflections on the field of neural network pruning. Specifically, for a typical pruning algorithm with three stages (pertaining, pruning, and retraining), we analyze the model performance correlation before and after retraining. Extensive experiments (**37K** models are trained) across a wide spectrum of models (LeNet5, VGG, ResNets, ViT, MLLM) and datasets (MNIST and its variants, CIFAR10/CIFAR100, ImageNet-1K, MLLM data) are conducted. The results lead to a surprising conclusion: on modern deep learning models, the performance before retraining is barely correlated with the performance after retraining. Namely, the weights selected by oracle pruning can hardly guarantee a good performance after retraining. This further implies that existing works using oracle pruning to derive pruning criteria may be groundless from the beginning. Further studies suggest the rising task complexity is one factor that makes oracle pruning invalid nowadays. Finally, given the evidence, we argue that the retraining stage in a pruning algorithm should be accounted for when developing any pruning criterion.
 
 <p align="center">
-<img src="./figures/1.jpg" height = "210" alt="" align=center />
+<img src="./figures/framework.svg" height = "210" alt="" align=center />
 </p>
 
 - Analysis framework of this work. We study the validity of oracle pruning in this paper, by examining the correlation between the *pruned train loss* and the *final test performance* (test accuracy or test loss). We apply this analysis framework to a wide range of networks and datasets (from toy networks like LeNet5-Mini to very large ones like ViT-B/16 and TinyLLaVA-3.1B) in order to have a comprehensive evaluation. The key finding of this work is that on modern networks and datasets (starting from the CIFAR level), oracle pruning is invalid, to our surprise. This new finding acutely challenges the conventional belief in network pruning over the past 35 years.
 
 
 <p align="center">
-<img src="./figures/2.jpg" height = "400" alt="" align=center />
+<img src="./figures/result.jpg" height = "400" alt="" align=center />
 </p>
 
 
