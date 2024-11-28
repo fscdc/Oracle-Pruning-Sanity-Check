@@ -33,17 +33,15 @@
 
 <img src="./figures/wlu-logo.png" height="100" alt="" align="center" style="margin-right: 10px;" />
 <img src="./figures/nku-logo.png" height="100" alt="" align="center" style="margin-right: 10px;" />
-<img src="./figures/xdu-logo.png" height="100" alt="" align="center" />
 
 </div>
 
 This repository is for our paper:
 
 > **[Is Oracle Pruning the True Oracle?](https://github.com/fscdc/Oracle-Pruning-Sanity-Check)** \
-> [Sicheng Feng](https://fscdc.github.io/)<sup>1,2</sup>, [Keda Tao](https://kd-tao.github.io/)<sup>1,3</sup>, [Huan Wang](http://huanwang.tech/)<sup>1,*</sup> \
+> [Sicheng Feng](https://fscdc.github.io/)<sup>1,2</sup>, [Keda Tao](https://kd-tao.github.io/)<sup>1</sup>, [Huan Wang](http://huanwang.tech/)<sup>1,*</sup> \
 > <sup>1</sup>Westlake University, Hangzhou, China \
 > <sup>2</sup>Nankai University, Tianjin, China \
-> <sup>3</sup>Xidian University, Xi'an, China \
 > <sup>∗</sup>Corresponding author: wanghuan@westlake.edu.cn
 
 
