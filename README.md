@@ -10,16 +10,16 @@
 
 <div align="center">
 
-![](https://img.shields.io/github/last-commit/fscdc/Oracle-Pruning-Sanity-Check?color=green)
 ![](https://img.shields.io/github/stars/fscdc/Oracle-Pruning-Sanity-Check?color=yellow)
 ![](https://img.shields.io/github/forks/fscdc/Oracle-Pruning-Sanity-Check?color=lightblue)
+![](https://img.shields.io/github/last-commit/fscdc/Oracle-Pruning-Sanity-Check?color=green)
 ![](https://img.shields.io/badge/PRs-Welcome-green)
 
 </div>
 
 <div align="center">
 
-**[<a href="">Paper Page</a>]**
+**[<a href="https://arxiv.org/abs/2412.00143">Paper Page</a>]**
 
 </div>
 
@@ -54,11 +54,17 @@ This repository is for our paper:
 > 🌟 If you find this resource helpful, please consider to star this repository and cite our research:
 
 ```
-TODO
+@article{feng2024oracle,
+  title={Is Oracle Pruning the True Oracle?},
+  author={Sicheng Feng, Keda Tao, Huan Wang},
+  journal={arXiv preprint arXiv:2412.00143},
+  year={2024},
+}
 ```
 
 ## Updates/News:
 
+🚩 **News** (Dec. 2024): Our paper is now available on arXiv!
 🚩 **News** (Nov. 2024): First release!
 
 ## Introduction
