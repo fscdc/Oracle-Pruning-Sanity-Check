@@ -64,7 +64,7 @@ This repository is for our paper:
 
 ## Updates/News:
 
-🚩 **News** (Dec. 2024): Our paper is now available on arXiv!
+🚩 **News** (Dec. 2024): Our paper is now available on arXiv! <br>
 🚩 **News** (Nov. 2024): First release!
 
 ## Introduction
