@@ -63,7 +63,7 @@ This repository is for our paper:
 ```
 
 ## Updates/News:
-
+🚩 **News** (Jan. 2025): We further validated our conclusion in the field of unstructured pruning on ImageNet-scale datasets and released the logs! <br>
 🚩 **News** (Dec. 2024): Our paper is now available on arXiv! <br>
 🚩 **News** (Nov. 2024): First release!
 
